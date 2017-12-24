@@ -1,0 +1,181 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5248,        171]
+NotebookOptionsPosition[      4263,        133]
+NotebookOutlinePosition[      4857,        156]
+CellTagsIndexPosition[      4754,        151]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{"BeginPackage", "[", "\"\<hermite`\>\"", 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"hermite", "::", "usage"}], "=", 
+  "\"\<hermite polynomials\>\""}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"hermite", "[", 
+   RowBox[{"0", ",", "x_"}], "]"}], ":=", "1"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"hermite", "[", 
+   RowBox[{"1", ",", "x_"}], "]"}], ":=", 
+  RowBox[{"2", "x"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"hermite", "[", 
+   RowBox[{"n_", ",", "x_"}], "]"}], ":=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"2", "x", " ", 
+     RowBox[{"hermite", "[", 
+      RowBox[{
+       RowBox[{"n", "-", "1"}], ",", "x"}], "]"}]}], "-", 
+    RowBox[{"2", 
+     RowBox[{"(", 
+      RowBox[{"n", "-", "1"}], ")"}], " ", 
+     RowBox[{"hermite", "[", 
+      RowBox[{
+       RowBox[{"n", "-", "2"}], ",", "x"}], "]"}]}]}], "//", 
+   "Expand"}]}], "\[IndentingNewLine]", 
+ RowBox[{"EndPackage", "[", "]"}]}], "Input",
+ CellChangeTimes->{{3.719657400228793*^9, 3.7196574095288744`*^9}, {
+  3.719657548190305*^9, 3.7196575522694755`*^9}, {3.71965761802962*^9, 
+  3.7196577737928667`*^9}, {3.719657805542636*^9, 3.7196578967683115`*^9}, {
+  3.719657999726159*^9, 3.719658034486161*^9}, {3.719658066503075*^9, 
+  3.719658069222537*^9}, {3.719658147319827*^9, 3.719658150751668*^9}, {
+  3.719658300720776*^9, 3.719658303424585*^9}, {3.7196583414557815`*^9, 
+  3.719658342643925*^9}, {3.7196584286199265`*^9, 3.719658443302782*^9}}],
+
+Cell[BoxData["\<\"hermite`\"\>"], "Output",
+ CellChangeTimes->{
+  3.719658227989386*^9, 3.719658305438298*^9, 3.719658343581439*^9, {
+   3.719658431511325*^9, 3.719658453345173*^9}}],
+
+Cell[BoxData["\<\"hermite polynomials\"\>"], "Output",
+ CellChangeTimes->{
+  3.719658227989386*^9, 3.719658305438298*^9, 3.719658343581439*^9, {
+   3.719658431511325*^9, 3.719658453360796*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"?", "hermite"}]], "Input",
+ CellChangeTimes->{{3.7196582353972626`*^9, 3.719658236650764*^9}}],
+
+Cell[BoxData[
+ StyleBox["\<\"hermite polynomials\"\>", "MSG"]], "Print", "PrintUsage",
+ CellChangeTimes->{3.7196582375881934`*^9},
+ CellTags->"Info-5e3ff73e-ef22-4376-872d-a3590d006b7d"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"hermite", "[", 
+  RowBox[{"10", ",", "x"}], "]"}]], "Input",
+ CellChangeTimes->{{3.719658265788973*^9, 3.719658278743435*^9}, {
+  3.7196583528649654`*^9, 3.7196583806613145`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"-", "30240"}], "+", 
+  RowBox[{"302400", " ", 
+   SuperscriptBox["x", "2"]}], "-", 
+  RowBox[{"403200", " ", 
+   SuperscriptBox["x", "4"]}], "+", 
+  RowBox[{"161280", " ", 
+   SuperscriptBox["x", "6"]}], "-", 
+  RowBox[{"23040", " ", 
+   SuperscriptBox["x", "8"]}], "+", 
+  RowBox[{"1024", " ", 
+   SuperscriptBox["x", "10"]}]}]], "Output",
+ CellChangeTimes->{{3.7196582758583927`*^9, 3.7196583084372735`*^9}, {
+  3.719658348770494*^9, 3.719658381474276*^9}, {3.7196584362693586`*^9, 
+  3.7196584649097233`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"HermiteH", "[", 
+  RowBox[{"10", ",", "x"}], "]"}]], "Input",
+ CellChangeTimes->{{3.719658286478046*^9, 3.7196582933235493`*^9}, {
+  3.719658385240365*^9, 3.7196583858013*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"-", "30240"}], "+", 
+  RowBox[{"302400", " ", 
+   SuperscriptBox["x", "2"]}], "-", 
+  RowBox[{"403200", " ", 
+   SuperscriptBox["x", "4"]}], "+", 
+  RowBox[{"161280", " ", 
+   SuperscriptBox["x", "6"]}], "-", 
+  RowBox[{"23040", " ", 
+   SuperscriptBox["x", "8"]}], "+", 
+  RowBox[{"1024", " ", 
+   SuperscriptBox["x", "10"]}]}]], "Output",
+ CellChangeTimes->{3.7196582936203737`*^9, 3.7196583865669303`*^9}]
+}, Open  ]]
+},
+WindowSize->{759, 601},
+WindowMargins->{{Automatic, 241}, {-35, Automatic}},
+Magnification:>1.8 Inherited,
+FrontEndVersion->"10.2 for Microsoft Windows (64-bit) (2015\:5e747\:67087\
+\:65e5)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "Info-5e3ff73e-ef22-4376-872d-a3590d006b7d"->{
+  Cell[2588, 77, 186, 3, 75, "Print",
+   CellTags->"Info-5e3ff73e-ef22-4376-872d-a3590d006b7d"]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"Info-5e3ff73e-ef22-4376-872d-a3590d006b7d", 4633, 145}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 1469, 36, 380, "Input"],
+Cell[2052, 60, 182, 3, 52, "Output"],
+Cell[2237, 65, 193, 3, 52, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2467, 73, 118, 2, 54, "Input"],
+Cell[2588, 77, 186, 3, 75, "Print",
+ CellTags->"Info-5e3ff73e-ef22-4376-872d-a3590d006b7d"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2811, 85, 203, 4, 54, "Input"],
+Cell[3017, 91, 547, 15, 122, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3601, 111, 200, 4, 82, "Input"],
+Cell[3804, 117, 443, 13, 89, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
